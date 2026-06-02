@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>管理單字</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>管理單字</h1>
+    <nav>
+      <a href="index.html">回到背單字</a>
+    </nav>
+  </header>
+
+  <main class="manager">
+    <form id="word-form">
+        <label>英文單字 <input id="input-word" type="text" autocomplete="off" required></label>
+        <label>中文翻譯 <input id="input-translation" type="text" autocomplete="off"></label>
+        <label>詞性 <input id="input-pos" type="text" autocomplete="off"></label>
+        <label>字根/來源 <input id="input-etymology" type="text" autocomplete="off"></label>
+        <label>備註 <input id="input-notes" type="text" autocomplete="off"></label>
+
+        <div class="form-actions">
+          <button type="button" id="autofill">自動填入</button>
+          <button type="submit" id="save">儲存單字</button>
+        </div>
+        <div id="status" class="status" aria-live="polite"></div>
+    <section id="list-area">
+      <h2>單字列表</h2>
+      <ul id="word-list"></ul>
+    </section>
+  </main>
+
+  <script src="manager.js"></script>
+</body>
+</html>

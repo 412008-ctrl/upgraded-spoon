@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>背單字 - Flashcards</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>背單字</h1>
+    <nav>
+      <a href="manager.html">管理單字</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="card-area">
+      <div id="card" class="card">
+        <div class="card-face card-front" id="card-front">English</div>
+        <div class="card-face card-back" id="card-back">中文</div>
+      </div>
+    </section>
+
+    <section class="controls">
+      <button id="prev">上一個</button>
+      <button id="next">下一個</button>
+      <button id="shuffle">洗牌</button>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
