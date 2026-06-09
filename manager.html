@@ -6,31 +6,31 @@
   <title>管理單字</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <header>
-    <h1>管理單字</h1>
+<body class="min-h-screen bg-background text-slate-100">
+  <header class="flex items-center justify-between px-6 py-5 backdrop-blur-sm bg-slate-950/80 border-b border-slate-700/40">
+    <h1 class="text-lg font-semibold tracking-[0.2em] uppercase text-slate-100">管理單字</h1>
     <nav>
-      <a href="index.html">回到背單字</a>
+      <a href="index.html" class="text-amber-200 hover:text-amber-100">回到背單字</a>
     </nav>
   </header>
 
-  <main class="manager">
-    <form id="word-form">
-        <label>英文單字 <input id="input-word" type="text" autocomplete="off" required></label>
-        <label>中文翻譯 <input id="input-translation" type="text" autocomplete="off"></label>
-        <label>詞性 <input id="input-pos" type="text" autocomplete="off"></label>
-        <label>字根/來源 <input id="input-etymology" type="text" autocomplete="off"></label>
-        <label>備註 <input id="input-notes" type="text" autocomplete="off"></label>
+  <main class="manager mx-auto px-6 py-10 bg-slate-950/90 border border-slate-700/60 rounded-[32px] shadow-[0_28px_80px_-40px_rgba(15,23,42,0.84)]">
+    <form id="word-form" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <label class="flex flex-col gap-3 text-sm text-slate-300">英文單字 <input id="input-word" type="text" autocomplete="off" required class="rounded-2xl border border-slate-700/80 bg-slate-900/80 px-4 py-3 text-sm text-slate-100 placeholder:text-slate-500 focus:border-amber-300 focus:outline-none focus:ring-2 focus:ring-amber-300/20"></label>
+        <label class="flex flex-col gap-3 text-sm text-slate-300">中文翻譯 <input id="input-translation" type="text" autocomplete="off" class="rounded-2xl border border-slate-700/80 bg-slate-900/80 px-4 py-3 text-sm text-slate-100 placeholder:text-slate-500 focus:border-amber-300 focus:outline-none focus:ring-2 focus:ring-amber-300/20"></label>
+        <label class="flex flex-col gap-3 text-sm text-slate-300">詞性 <input id="input-pos" type="text" autocomplete="off" class="rounded-2xl border border-slate-700/80 bg-slate-900/80 px-4 py-3 text-sm text-slate-100 placeholder:text-slate-500 focus:border-amber-300 focus:outline-none focus:ring-2 focus:ring-amber-300/20"></label>
+        <label class="flex flex-col gap-3 text-sm text-slate-300">字根/來源 <input id="input-etymology" type="text" autocomplete="off" class="rounded-2xl border border-slate-700/80 bg-slate-900/80 px-4 py-3 text-sm text-slate-100 placeholder:text-slate-500 focus:border-amber-300 focus:outline-none focus:ring-2 focus:ring-amber-300/20"></label>
+        <label class="flex flex-col gap-3 text-sm text-slate-300">備註 <input id="input-notes" type="text" autocomplete="off" class="rounded-2xl border border-slate-700/80 bg-slate-900/80 px-4 py-3 text-sm text-slate-100 placeholder:text-slate-500 focus:border-amber-300 focus:outline-none focus:ring-2 focus:ring-amber-300/20"></label>
 
-        <div class="form-actions">
-          <button type="button" id="autofill">自動填入</button>
-          <button type="submit" id="save">儲存單字</button>
+        <div class="form-actions flex flex-wrap gap-4 items-center">
+          <button type="button" id="autofill" class="rounded-full border border-amber-300/30 bg-amber-300/10 px-5 py-3 text-sm font-semibold text-amber-100 transition hover:bg-amber-300/20">自動填入</button>
+          <button type="submit" id="save" class="rounded-full border border-amber-300/30 bg-amber-300/10 px-5 py-3 text-sm font-semibold text-amber-100 transition hover:bg-amber-300/20">儲存單字</button>
         </div>
-        <div id="status" class="status" aria-live="polite"></div>
+        <div id="status" class="status mt-2 text-sm text-slate-300" aria-live="polite"></div>
     </form>
-    <section id="list-area">
-      <h2>單字列表</h2>
-      <ul id="word-list"></ul>
+    <section id="list-area" class="mt-10">
+      <h2 class="text-xl font-semibold tracking-[0.04em] text-amber-200">單字列表</h2>
+      <ul id="word-list" class="grid gap-4 mt-5"></ul>
     </section>
   </main>
 

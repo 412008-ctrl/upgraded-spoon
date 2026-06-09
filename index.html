@@ -6,26 +6,26 @@
   <title>背單字 - Flashcards</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <header>
-    <h1>背單字</h1>
+<body class="min-h-screen bg-background text-slate-100">
+  <header class="flex items-center justify-between px-6 py-5 backdrop-blur-sm bg-slate-950/80 border-b border-slate-700/40">
+    <h1 class="text-lg font-semibold tracking-[0.2em] uppercase text-slate-100">背單字</h1>
     <nav>
-      <a href="manager.html">管理單字</a>
+      <a href="manager.html" class="text-amber-200 hover:text-amber-100">管理單字</a>
     </nav>
   </header>
 
-  <main>
-    <section class="card-area">
+  <main class="px-6 py-10 flex flex-col items-center gap-10">
+    <section class="card-area w-[min(360px,92vw)] h-[min(220px,56vw)]">
       <div id="card" class="card">
-        <div class="card-face card-front" id="card-front">English</div>
-        <div class="card-face card-back" id="card-back">中文</div>
+        <div class="card-face card-front text-3xl font-bold tracking-tight text-amber-100" id="card-front">English</div>
+        <div class="card-face card-back text-sm leading-7 text-slate-200" id="card-back">中文</div>
       </div>
     </section>
 
-    <section class="controls">
-      <button id="prev">上一個</button>
-      <button id="next">下一個</button>
-      <button id="shuffle">洗牌</button>
+    <section class="controls flex flex-wrap gap-4 justify-center">
+      <button id="prev" class="rounded-full border border-amber-300/30 bg-amber-300/10 px-5 py-3 text-sm font-semibold text-amber-100 transition hover:bg-amber-300/20">上一個</button>
+      <button id="next" class="rounded-full border border-amber-300/30 bg-amber-300/10 px-5 py-3 text-sm font-semibold text-amber-100 transition hover:bg-amber-300/20">下一個</button>
+      <button id="shuffle" class="rounded-full border border-amber-300/30 bg-amber-300/10 px-5 py-3 text-sm font-semibold text-amber-100 transition hover:bg-amber-300/20">洗牌</button>
     </section>
   </main>
 
